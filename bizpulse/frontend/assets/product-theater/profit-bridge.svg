@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+  <title id="title">Profit bridge</title>
+  <desc id="desc">Abstract waterfall chart connecting sales to contribution profit.</desc>
+  <rect width="720" height="480" rx="36" fill="#102b23"/>
+  <rect x="30" y="30" width="660" height="420" rx="26" fill="#16392f" stroke="#386556"/>
+  <rect x="58" y="58" width="164" height="18" rx="9" fill="#e2f2e9"/>
+  <rect x="58" y="90" width="268" height="10" rx="5" fill="#afc6bd" opacity=".65"/>
+  <g transform="translate(58 144)">
+    <path d="M0 250H604" stroke="#52766a" stroke-width="2"/>
+    <rect x="10" y="52" width="76" height="198" rx="12" fill="#5ca180"/>
+    <path d="M86 52H120" stroke="#afc6bd" stroke-width="3" stroke-dasharray="6 5"/>
+    <rect x="120" y="92" width="76" height="74" rx="12" fill="#cf6d63"/>
+    <path d="M196 166H230" stroke="#afc6bd" stroke-width="3" stroke-dasharray="6 5"/>
+    <rect x="230" y="166" width="76" height="44" rx="12" fill="#cf6d63"/>
+    <path d="M306 210H340" stroke="#afc6bd" stroke-width="3" stroke-dasharray="6 5"/>
+    <rect x="340" y="128" width="76" height="82" rx="12" fill="#d7a856"/>
+    <path d="M416 128H450" stroke="#afc6bd" stroke-width="3" stroke-dasharray="6 5"/>
+    <rect x="450" y="128" width="112" height="122" rx="12" fill="#e2f2e9"/>
+    <g fill="#afc6bd">
+      <rect x="12" y="272" width="70" height="9" rx="4"/>
+      <rect x="123" y="272" width="70" height="9" rx="4"/>
+      <rect x="233" y="272" width="70" height="9" rx="4"/>
+      <rect x="343" y="272" width="70" height="9" rx="4"/>
+      <rect x="466" y="272" width="82" height="9" rx="4"/>
+    </g>
+  </g>
+  <rect x="514" y="58" width="146" height="46" rx="14" fill="#d9eee2"/>
+  <rect x="534" y="72" width="106" height="18" rx="9" fill="#166149"/>
+</svg>

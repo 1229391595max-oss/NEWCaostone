@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Workspace — BizPulse</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand-row">
+          <span class="brand">BP</span>
+          <span class="status-pill">Non-Production</span>
+        </div>
+        <p class="dataset-label" data-dataset-label>Demo workspace</p>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation" data-i18n-aria-label="accessibility.primaryNavigation">
+        <button type="button" data-short="D" title="Data Workspace" aria-label="Data Workspace" data-primary-route="workspace" data-i18n="nav.workspace">Data Workspace</button>
+        <button type="button" data-short="O" title="Today Overview" aria-label="Today Overview" data-primary-route="overview" data-i18n="nav.overview">Today Overview</button>
+        <button type="button" data-short="S" title="Sales &amp; Advertising" aria-label="Sales &amp; Advertising" data-primary-route="sales" data-i18n="nav.sales">Sales &amp; Advertising</button>
+        <button type="button" data-short="I" title="Inventory &amp; Replenishment" aria-label="Inventory &amp; Replenishment" data-primary-route="inventory" data-i18n="nav.inventory">Inventory &amp; Replenishment</button>
+        <button type="button" data-short="P" title="Profit &amp; Cost" aria-label="Profit &amp; Cost" data-primary-route="profit" data-i18n="nav.profit">Profit &amp; Cost</button>
+        <button type="button" data-short="AI" title="AI Decision Center" aria-label="AI Decision Center" data-primary-route="briefing" data-i18n="nav.briefing">AI Decision Center</button>
+      </nav>
+      <div class="sidebar-footer">
+        <a class="text-button" href="/admin" data-admin-entry data-i18n="nav.admin" aria-label="Administrator Console" title="Administrator Console" hidden>Administrator Console</a>
+        <button class="text-button settings-route" type="button" data-settings-route="settings" data-short="⚙" title="Settings" aria-label="Settings" data-i18n="nav.settings">Settings</button>
+        <button class="text-button language-toggle" type="button" data-language-toggle data-short="中" aria-label="Change language">English / 中文</button>
+      </div>
+    </aside>
+    <main class="workspace-main">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow" data-i18n="shell.eyebrow">Decision workspace</p>
+          <h1 data-view-title>Workspace</h1>
+        </div>
+        <div class="workspace-header-tools">
+          <div data-store-scope-root></div>
+          <span class="freshness" data-release-freshness>Loading data…</span>
+        </div>
+      </header>
+      <p class="scope-change-notice" data-store-scope-notice role="status" hidden></p>
+      <p class="import-error" data-runtime-error role="alert" hidden></p>
+      <section class="view-panel" data-view-root aria-live="polite"></section>
+    </main>
+    <script type="module" src="/assets/app.mjs"></script>
+  </body>
+</html>

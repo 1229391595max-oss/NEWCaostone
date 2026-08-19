@@ -1,0 +1,3 @@
+store_id,display_name_en,display_name_zh,currency,opened_on,lifecycle,has_data,source_classification
+SYNTH-STORE-01,Brazil Main Store,巴西主店,BRL,2026-05-01,established,True,pure_synthetic
+SYNTH-STORE-02,Brazil Launch Store,巴西新店,BRL,2026-07-08,new,True,pure_synthetic

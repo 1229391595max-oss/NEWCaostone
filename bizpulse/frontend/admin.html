@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BP Admin — BizPulse</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body class="app-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand-row">
+          <span class="brand">BP Admin</span>
+          <span class="status-pill">Non-Production</span>
+        </div>
+        <p class="dataset-label" data-i18n="admin.shell.eyebrow">Administrator console</p>
+      </div>
+      <nav class="primary-nav" aria-label="Administrator navigation" data-admin-navigation>
+        <a class="text-button" href="/admin" data-admin-route="overview" data-short="概" data-tooltip="Overview · 概览" aria-label="Overview · 概览" title="Overview · 概览">Overview</a>
+        <a class="text-button" href="/admin/data" data-admin-route="data" data-short="数" data-tooltip="Data Management · 数据管理" aria-label="Data Management · 数据管理" title="Data Management · 数据管理">Data Management</a>
+        <a class="text-button" href="/admin/status" data-admin-route="status" data-short="状" data-tooltip="System Status · 系统状态" aria-label="System Status · 系统状态" title="System Status · 系统状态">System Status</a>
+        <a class="text-button" href="/admin/ai" data-admin-route="ai" data-short="AI" data-tooltip="AI Management · AI 管理" aria-label="AI Management · AI 管理" title="AI Management · AI 管理">AI Management</a>
+      </nav>
+      <div class="sidebar-footer">
+        <a class="text-button" href="/app" data-short="返" data-tooltip="Return to workspace · 返回工作区" aria-label="Return to workspace · 返回工作区" title="Return to workspace · 返回工作区">Return to workspace</a>
+        <button class="text-button language-toggle" type="button" data-language-toggle data-short="中" aria-label="Change language">English / 中文</button>
+      </div>
+    </aside>
+    <main class="workspace-main">
+      <header class="workspace-header">
+        <div>
+          <p class="eyebrow" data-i18n="admin.shell.eyebrow">Administrator console</p>
+          <h1 data-admin-title>Overview</h1>
+        </div>
+      </header>
+      <section class="view-panel" data-admin-root></section>
+    </main>
+    <script type="module" src="/assets/admin.mjs"></script>
+  </body>
+</html>

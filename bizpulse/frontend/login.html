@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in — BizPulse</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body class="public-shell login-shell">
+    <main class="login-layout">
+      <section class="product-theater product-theater-compact" data-product-theater aria-label="Product highlights">
+        <p class="eyebrow" data-i18n="theater.eyebrow">Inside BizPulse</p>
+        <div class="product-theater-viewport">
+          <figure class="product-slide" data-product-slide="overview">
+            <img src="/assets/product-theater/overview.svg" alt="Abstract business overview dashboard" width="720" height="480">
+            <figcaption>
+              <h2 data-i18n="theater.overviewTitle">See the whole business at a glance</h2>
+              <p data-i18n="theater.overviewBody">Track sales, margin and operating signals in one decision view.</p>
+            </figcaption>
+          </figure>
+          <figure class="product-slide" data-product-slide="profit_bridge" hidden>
+            <img src="/assets/product-theater/profit-bridge.svg" alt="Abstract profit bridge chart" width="720" height="480">
+            <figcaption>
+              <h2 data-i18n="theater.profitTitle">Explain every margin movement</h2>
+              <p data-i18n="theater.profitBody">Trace the bridge from revenue through cost drivers to contribution profit.</p>
+            </figcaption>
+          </figure>
+          <figure class="product-slide" data-product-slide="inventory_forecast" hidden>
+            <img src="/assets/product-theater/inventory-forecast.svg" alt="Abstract inventory forecast" width="720" height="480">
+            <figcaption>
+              <h2 data-i18n="theater.inventoryTitle">Spot inventory risk before it becomes a stockout</h2>
+              <p data-i18n="theater.inventoryBody">Compare coverage, velocity and forecast ranges across the catalog.</p>
+            </figcaption>
+          </figure>
+          <figure class="product-slide" data-product-slide="ask_bizpulse" hidden>
+            <img src="/assets/product-theater/ask-bizpulse.svg" alt="Abstract evidence-bound AI conversation" width="720" height="480">
+            <figcaption>
+              <h2 data-i18n="theater.aiTitle">Ask focused questions with evidence attached</h2>
+              <p data-i18n="theater.aiBody">Turn bounded business facts into clear explanations and next actions.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="product-theater-controls">
+          <button type="button" data-product-previous aria-label="Previous highlight">←</button>
+          <div class="product-theater-dots" aria-label="Product slides">
+            <button type="button" data-product-dot="overview" aria-label="Overview"></button>
+            <button type="button" data-product-dot="profit_bridge" aria-label="Profit bridge"></button>
+            <button type="button" data-product-dot="inventory_forecast" aria-label="Inventory forecast"></button>
+            <button type="button" data-product-dot="ask_bizpulse" aria-label="Ask BizPulse"></button>
+          </div>
+          <button type="button" data-product-next aria-label="Next highlight">→</button>
+        </div>
+      </section>
+      <section class="login-card">
+        <a class="brand" href="/">BizPulse</a>
+        <span class="status-pill">Non-Production</span>
+        <h1 data-i18n="login.title">Sign in</h1>
+        <p data-i18n="login.summary">Enter the configured operator credential.</p>
+        <form class="login-form" data-login-form>
+          <label for="operator-login" data-i18n="login.name">Account</label>
+          <input id="operator-login" name="login_name" type="text" autocomplete="username" value="operator" required>
+          <label for="operator-password" data-i18n="login.password">Password</label>
+          <input id="operator-password" name="password" type="password" autocomplete="current-password" required>
+          <button class="primary-button" type="submit" data-i18n="login.submit">Sign in</button>
+          <p class="form-message" data-login-message aria-live="polite"></p>
+        </form>
+        <button class="text-button" type="button" data-language-toggle aria-label="Change language">中文</button>
+      </section>
+    </main>
+    <script type="module" src="/assets/login.mjs"></script>
+  </body>
+</html>

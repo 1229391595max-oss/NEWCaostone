@@ -1,0 +1,5 @@
+cost_id,period_start,period_end,store_id,cost_brl,scenario_id,source_classification
+SYNTH-VARIABLE-COST-MAY,2026-05-01,2026-05-31,SYNTH-STORE-01,600.00,,pure_synthetic
+SYNTH-VARIABLE-COST-JUNE,2026-06-01,2026-06-30,SYNTH-STORE-01,650.00,profit_bridge_residual,pure_synthetic
+SYNTH-VARIABLE-COST-JULY,2026-07-01,2026-07-31,SYNTH-STORE-01,725.00,profit_bridge_residual,pure_synthetic
+SYNTH-LAUNCH-VARIABLE-COST-JULY,2026-07-01,2026-07-31,SYNTH-STORE-02,95.00,,pure_synthetic

@@ -1,0 +1,7 @@
+sku_id,product_name,category,unit_price_brl,unit_cost_brl,source_classification
+SYNTH-SKU-001,Synthetic Product 01,travel_bag,129.90,48.00,pure_synthetic
+SYNTH-SKU-002,Synthetic Product 02,desk_accessory,79.90,24.00,pure_synthetic
+SYNTH-SKU-003,Synthetic Product 03,home_storage,99.90,37.00,pure_synthetic
+SYNTH-SKU-004,Synthetic Product 04,fitness_accessory,149.90,58.00,pure_synthetic
+SYNTH-SKU-005,Synthetic Product 05,kitchen_accessory,59.90,18.00,pure_synthetic
+SYNTH-SKU-006,Synthetic Product 06,pet_accessory,89.90,31.00,pure_synthetic

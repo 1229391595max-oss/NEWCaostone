@@ -1,0 +1,3 @@
+action_id,outcome_id,decision,result,scenario_id,source_classification
+SYNTH-ACTION-0001,SYNTH-OUTCOME-0001,approved,synthetic_positive,action_outcome,pure_synthetic
+SYNTH-ACTION-0002,SYNTH-OUTCOME-0002,reviewed,needs_clarification,chat_clarification,pure_synthetic

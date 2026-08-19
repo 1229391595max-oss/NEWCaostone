@@ -1,0 +1,4 @@
+fx_id,period_start,period_end,currency,brl_per_usd,source_classification
+SYNTH-FX-0001,2026-05-01,2026-05-31,USD,5.25,pure_synthetic
+SYNTH-FX-0002,2026-06-01,2026-06-30,USD,5.20,pure_synthetic
+SYNTH-FX-0003,2026-07-01,2026-07-31,USD,5.15,pure_synthetic

@@ -1,0 +1,35 @@
+{
+  "attested_rollback": {
+    "candidate_attestation_path": "release/attestations/537effe3036f77f83225beef12589bd447205a8b.json",
+    "git_sha": "537effe3036f77f83225beef12589bd447205a8b",
+    "image_digest": "sha256:2a95c20046cde04a383a280b350a450c15cc7c46df92e1e8eaf5014eeb5c8512"
+  },
+  "development": {
+    "ai_capability_state": "implemented",
+    "repository_migration_head": "0017_ai_turn_credential_binding"
+  },
+  "freshness": {
+    "evidence_kind": "sanitized_azure_readback",
+    "evidence_sha256": "07d3179aa275fec2d8f4347566b7f42f782f0024d1205442e78ca30ed657a233",
+    "expires_at": "2026-08-16T20:25:35Z",
+    "observed_at": "2026-08-16T01:26:00Z"
+  },
+  "observed_deployment": {
+    "ai_runtime_state": "disabled",
+    "attestation_git_sha": "168349f0d6242405f37fa9a44dbad17f03063d96",
+    "candidate_git_sha": "537effe3036f77f83225beef12589bd447205a8b",
+    "database_migration_head": "0008_ai_budget_ledger",
+    "image_digest": "sha256:2a95c20046cde04a383a280b350a450c15cc7c46df92e1e8eaf5014eeb5c8512",
+    "revision": "newcaostone-demo-app--recover-78eaaf31-2a95c20"
+  },
+  "prepared_candidate": {
+    "attestation_git_sha": "c573f2be9d8d6414143fbeab2fa2af788caf4f19",
+    "authorization_id": "5b73b24d-2ae8-4245-a769-be9735b2fb24",
+    "authorization_sha256": "91e210d5c41c430eec8685e39ae10377bdf293e96a5a77662f2e77a51b764f6a",
+    "candidate_git_sha": "82fd4a4dcfbc04a6cbe6386ce8891b750a1ea7e3",
+    "image_digest": "sha256:713a6984d4a034a0be73b46c10a897aeb236c201325ff8a88ba524fc6c10295c",
+    "migration_head": "0014_import_base_lineage",
+    "state": "seeded_awaiting_application_deploy"
+  },
+  "schema_version": "bizpulse.current-authority.v1"
+}

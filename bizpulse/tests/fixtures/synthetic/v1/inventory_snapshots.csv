@@ -1,0 +1,10 @@
+date,store_id,sku_id,on_hand_units,inbound_units,scenario_id,source_classification
+2026-07-31,SYNTH-STORE-01,SYNTH-SKU-001,0,20,,pure_synthetic
+2026-07-31,SYNTH-STORE-01,SYNTH-SKU-002,0,60,inventory_stockout,pure_synthetic
+2026-07-31,SYNTH-STORE-01,SYNTH-SKU-003,0,20,,pure_synthetic
+2026-07-31,SYNTH-STORE-01,SYNTH-SKU-004,0,20,,pure_synthetic
+2026-07-31,SYNTH-STORE-01,SYNTH-SKU-005,0,20,,pure_synthetic
+2026-07-31,SYNTH-STORE-01,SYNTH-SKU-006,0,20,,pure_synthetic
+2026-07-31,SYNTH-STORE-02,SYNTH-SKU-001,50,15,,pure_synthetic
+2026-07-31,SYNTH-STORE-02,SYNTH-SKU-003,49,18,,pure_synthetic
+2026-07-31,SYNTH-STORE-02,SYNTH-SKU-006,59,21,,pure_synthetic

@@ -1,0 +1,9 @@
+scenario_id,scenario_name,source_classification
+sales_ads_growth,sales ads growth,pure_synthetic
+inventory_stockout,inventory stockout,pure_synthetic
+fifo_aging,fifo aging,pure_synthetic
+profit_decline_ad_spend,profit decline ad spend,pure_synthetic
+new_product_low_base_high,new product low base high,pure_synthetic
+profit_bridge_residual,profit bridge residual,pure_synthetic
+chat_clarification,chat clarification,pure_synthetic
+action_outcome,action outcome,pure_synthetic

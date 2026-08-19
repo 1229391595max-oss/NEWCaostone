@@ -1,0 +1,52 @@
+.welcome-grid::before {
+  position: fixed;
+  inset: -25vh auto auto -10vw;
+  width: 42vw;
+  height: 42vw;
+  border-radius: 50%;
+  background: rgb(63 151 111 / 10%);
+  content: "";
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.welcome-grid > * {
+  position: relative;
+}
+
+.public-entry-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(440px, 1.1fr);
+  align-items: stretch;
+  margin-top: 5vh;
+}
+
+.public-entry-grid .hero-card {
+  display: grid;
+  align-content: center;
+}
+
+.boundary-note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.boundary-note h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.boundary-note p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .public-entry-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,113 @@
+{
+  "attestation_policy": {
+    "allowed_paths": [
+      "bizpulse/release/attestations/537effe3036f77f83225beef12589bd447205a8b.json"
+    ],
+    "commit_parent_must_equal_candidate": true
+  },
+  "candidate_committed_at": "2026-08-15T16:45:54-05:00",
+  "candidate_git_sha": "537effe3036f77f83225beef12589bd447205a8b",
+  "candidate_git_tree": "f3d7f47385c57546ac490323784b053069d03442",
+  "claims": {
+    "accepted": false,
+    "ci_verified": false,
+    "deployed": false,
+    "hosted_verified": false,
+    "local_verified": true,
+    "production_ready": false
+  },
+  "configuration_names": [
+    "BIZPULSE_AI_CHAT_ENABLED",
+    "BIZPULSE_AI_DAILY_ATTEMPT_LIMIT",
+    "BIZPULSE_AI_GLOBAL_ATTEMPT_LIMIT_PER_MINUTE",
+    "BIZPULSE_AI_MAX_CONCURRENT_TURNS",
+    "BIZPULSE_AI_MONTHLY_TOKEN_LIMIT",
+    "BIZPULSE_AI_SESSION_ATTEMPT_LIMIT_PER_MINUTE",
+    "BIZPULSE_ALLOWED_ORIGIN",
+    "BIZPULSE_BLOB_CONNECTION_STRING",
+    "BIZPULSE_BLOB_CONTAINER",
+    "BIZPULSE_BLOB_ENDPOINT",
+    "BIZPULSE_DATABASE_URL",
+    "BIZPULSE_DEMO_SESSION_RATE_LIMIT_PER_HOUR",
+    "BIZPULSE_OPENAI_MODEL",
+    "BIZPULSE_OPENAI_REASONING_EFFORT",
+    "BIZPULSE_OPERATOR_PASSWORD_HASH",
+    "BIZPULSE_REQUEST_BODY_LIMIT_BYTES",
+    "BIZPULSE_RUNTIME_ENVIRONMENT",
+    "BIZPULSE_SESSION_PEPPER"
+  ],
+  "dependencies": {
+    "package-lock.json": "4f3ad0fa570ce7d2d33fb5f4391ca5a2cee971f8cbfb73d373034ed5c14c3798",
+    "package.json": "3af903eccdb233ea7dbadea41c9dda62732fe149ae51cc01f4f19915e74ce469",
+    "requirements-dev.txt": "059737b2ec19a11a3fb3d39370bcc643dfebacaf3a6632509fffdf407c8e201a",
+    "requirements.txt": "8329ccee47befb63b26ea8c24e127e11e40086f9f8e016cfe115a5fb78fd84ca"
+  },
+  "image_input_sha256": "07d3179aa275fec2d8f4347566b7f42f782f0024d1205442e78ca30ed657a233",
+  "migration_head": "0008_ai_budget_ledger",
+  "model_snapshot": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "reasoning_effort": "low"
+  },
+  "rollback_compatible_prior_sha": "3e933d083b3ab4dba36d8053f56ecf2d68d31f1e",
+  "rollback_image_input_sha256": "69e53aecd6659df38db57c8090f8adf1363263c9d356b47c8a857f199a93f885",
+  "schema_version": "newcaostone.task15-local-release.v2",
+  "synthetic_fixture": {
+    "generator_source_sha256": "18fdce7e7c6ee876ba31b30e9ce7de859fed9d3897a2216494e40aa665680fdc",
+    "manifest_path": "tests/fixtures/synthetic/v1/manifest.json",
+    "manifest_sha256": "8bb389bb241e904fcb2bb092b082da31d99aa314acab47068a293d184e5c329e",
+    "source_classification": "pure_synthetic"
+  },
+  "verification_evidence": {
+    "checks": [
+      {
+        "command": "static candidate, source, migration, model, secret, and size checks",
+        "name": "static_release_boundaries",
+        "passed": true,
+        "summary": "all static boundaries passed"
+      },
+      {
+        "command": "python scripts/test_postgres.py tests -q",
+        "name": "python",
+        "passed": true,
+        "summary": "526 passed"
+      },
+      {
+        "command": "node --test tests/frontend/action-inbox.test.mjs tests/frontend/analytics.test.mjs tests/frontend/api-client.test.mjs tests/frontend/ask-bizpulse-effects.test.mjs tests/frontend/ask-bizpulse-state.test.mjs tests/frontend/ask-bizpulse-view-model.test.mjs tests/frontend/ask-bizpulse-view.test.mjs tests/frontend/browser-process-env.test.mjs tests/frontend/charts.test.mjs tests/frontend/evidence-drawer.test.mjs tests/frontend/forecast.test.mjs tests/frontend/login.test.mjs tests/frontend/profit-bridge.test.mjs tests/frontend/runtime-session.test.mjs tests/frontend/shell.test.mjs tests/frontend/workspace.test.mjs",
+        "name": "frontend",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "python scripts/test_postgres.py tests/acceptance/test_exact_15_sessions.py tests/acceptance/test_restart_readback.py tests/acceptance/test_rollback_compatibility.py -q",
+        "name": "exact_15_restart_rollback",
+        "passed": true,
+        "summary": "3 passed"
+      },
+      {
+        "command": "python -m ruff check .",
+        "name": "ruff",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "python -m compileall -q api src scripts",
+        "name": "compileall",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "git diff --check HEAD",
+        "name": "diff_check",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "python scripts/test_postgres.py tests/acceptance/test_browser_smoke.py -q",
+        "name": "browser",
+        "passed": true,
+        "summary": "2 passed"
+      }
+    ],
+    "sha256": "520772160f25a77bb41fdc10c67777e3ac16918acabcf726fd1e382db0b56436"
+  }
+}

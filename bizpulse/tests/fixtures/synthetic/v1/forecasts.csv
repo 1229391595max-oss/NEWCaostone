@@ -1,0 +1,10 @@
+forecast_id,new_product_id,horizon_days,forecast_scenario,units,similar_sku_ids,scenario_id,source_classification
+SYNTH-FORECAST-007-LOW,SYNTH-NEW-001,7,low,8,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-007-BASE,SYNTH-NEW-001,7,base,11,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-007-HIGH,SYNTH-NEW-001,7,high,15,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-030-LOW,SYNTH-NEW-001,30,low,33,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-030-BASE,SYNTH-NEW-001,30,base,48,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-030-HIGH,SYNTH-NEW-001,30,high,66,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-090-LOW,SYNTH-NEW-001,90,low,99,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-090-BASE,SYNTH-NEW-001,90,base,144,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic
+SYNTH-FORECAST-090-HIGH,SYNTH-NEW-001,90,high,198,SYNTH-SKU-001|SYNTH-SKU-006,new_product_low_base_high,pure_synthetic

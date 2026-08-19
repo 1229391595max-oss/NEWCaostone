@@ -1,0 +1,5 @@
+expense_id,period_start,period_end,store_id,scope,expense_type,amount_brl,scenario_id,source_classification
+SYNTH-EXP-0001-MAY,2026-05-01,2026-05-31,,shared,software,430.00,,pure_synthetic
+SYNTH-EXP-0002-JUNE,2026-06-01,2026-06-30,,shared,software,450.00,profit_bridge_residual,pure_synthetic
+SYNTH-EXP-0003-JULY,2026-07-01,2026-07-31,,shared,software,480.00,profit_bridge_residual,pure_synthetic
+SYNTH-LAUNCH-EXP-0001-JULY,2026-07-01,2026-07-31,SYNTH-STORE-02,store,launch_operations,120.00,,pure_synthetic

@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "path": "CURRENT_STATUS.md",
+      "require_current_block": true
+    },
+    {
+      "path": "AUTHORIZATION_LEDGER.md",
+      "require_current_block": true
+    },
+    {
+      "path": "docs/handoffs/CURRENT_HANDOFF.md",
+      "require_current_block": true
+    },
+    {
+      "path": "docs/handoffs/NEXT_AI_BOOTSTRAP_2026-08-15.md",
+      "require_current_block": true
+    },
+    {
+      "path": "docs/handoffs/AZURE_LAUNCH_HANDOFF_2026-08-15.md",
+      "require_current_block": true
+    }
+  ],
+  "schema_version": "bizpulse.authority-document-policy.v1"
+}

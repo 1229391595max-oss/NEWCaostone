@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" role="img" aria-labelledby="title desc">
+  <title id="title">Business overview dashboard</title>
+  <desc id="desc">Abstract metric cards and a rising sales trend.</desc>
+  <rect width="720" height="480" rx="36" fill="#f4f7f4"/>
+  <rect x="28" y="28" width="664" height="424" rx="26" fill="#ffffff" stroke="#dce5df"/>
+  <circle cx="61" cy="60" r="10" fill="#166149"/>
+  <rect x="82" y="52" width="112" height="16" rx="8" fill="#14221f" opacity=".9"/>
+  <rect x="550" y="48" width="110" height="24" rx="12" fill="#d9eee2"/>
+  <g transform="translate(54 108)">
+    <rect width="180" height="104" rx="18" fill="#eef7f1"/>
+    <rect x="18" y="19" width="72" height="10" rx="5" fill="#63736d" opacity=".6"/>
+    <rect x="18" y="48" width="118" height="25" rx="8" fill="#166149"/>
+    <rect x="18" y="83" width="92" height="8" rx="4" fill="#9eb9ac"/>
+  </g>
+  <g transform="translate(252 108)">
+    <rect width="180" height="104" rx="18" fill="#f8f3e9"/>
+    <rect x="18" y="19" width="86" height="10" rx="5" fill="#63736d" opacity=".6"/>
+    <rect x="18" y="48" width="92" height="25" rx="8" fill="#bc7a2b"/>
+    <rect x="18" y="83" width="108" height="8" rx="4" fill="#d6c5a8"/>
+  </g>
+  <g transform="translate(450 108)">
+    <rect width="216" height="104" rx="18" fill="#f0f3f2"/>
+    <rect x="18" y="19" width="96" height="10" rx="5" fill="#63736d" opacity=".6"/>
+    <rect x="18" y="48" width="132" height="25" rx="8" fill="#14221f"/>
+    <rect x="18" y="83" width="122" height="8" rx="4" fill="#aebdb5"/>
+  </g>
+  <g transform="translate(54 242)">
+    <rect width="612" height="166" rx="20" fill="#fbfcfb" stroke="#e4ebe7"/>
+    <path d="M30 126H582M30 88H582M30 50H582" stroke="#e5ece8" stroke-width="2"/>
+    <path d="M38 128C88 120 103 132 150 105S229 112 274 80 345 98 392 61 470 67 516 38 552 44 578 25" fill="none" stroke="#166149" stroke-width="8" stroke-linecap="round"/>
+    <path d="M38 128C88 120 103 132 150 105S229 112 274 80 345 98 392 61 470 67 516 38 552 44 578 25V142H38Z" fill="#d9eee2" opacity=".65"/>
+    <g fill="#166149">
+      <circle cx="150" cy="105" r="7"/><circle cx="274" cy="80" r="7"/><circle cx="392" cy="61" r="7"/><circle cx="516" cy="38" r="7"/>
+    </g>
+  </g>
+</svg>

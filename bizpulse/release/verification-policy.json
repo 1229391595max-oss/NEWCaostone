@@ -1,0 +1,702 @@
+{
+  "checks": {
+    "authority_contract": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_authority_contract.py",
+        "--mode",
+        "docs"
+      ],
+      "reuse": "development_only"
+    },
+    "frontend": {
+      "argv": [
+        "npm",
+        "test"
+      ],
+      "reuse": "development_only"
+    },
+    "ai_focused": {
+      "argv": [
+        ".venv/bin/pytest",
+        "tests/unit/ai",
+        "tests/services/test_ai_chat_service.py",
+        "tests/api/v1/test_ai_chat.py",
+        "tests/security/test_ai_chat_boundary.py",
+        "tests/unit/test_config.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "ai_infra_boundary": {
+      "argv": [
+        ".venv/bin/pytest",
+        "tests/infra/test_bicep_contract.py",
+        "tests/services/test_ai_chat_container.py",
+        "tests/security/test_ai_chat_boundary.py",
+        "tests/unit/test_config.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "release_static": {
+      "argv": [
+        ".venv/bin/pytest",
+        "tests/release/test_container_contract.py",
+        "tests/release/test_release_scripts.py",
+        "tests/release/test_two_stage_release_package.py",
+        "tests/release/test_partial_release_recovery_package.py",
+        "tests/release/test_seeded_release_recovery_package.py",
+        "tests/hosted/test_verify_azure_demo.py",
+        "tests/hosted/test_verify_partial_release_state.py",
+        "tests/hosted/test_verify_seeded_release_state.py",
+        "tests/hosted/test_run_seeded_release_recovery.py",
+        "tests/hosted/test_verify_deployed_release_state.py",
+        "tests/release/test_deployed_release_recovery_package.py",
+        "tests/hosted/test_run_deployed_release_recovery.py",
+        "tests/hosted/test_update_azure_job_binding.py",
+        "tests/hosted/test_phase1_receipt_resume.py",
+        "tests/hosted/test_rollback_forward_resume.py",
+        "tests/hosted/test_rollback_forward_resume_runner.py",
+        "tests/hosted/test_azure_preflight.py",
+        "tests/hosted/test_run_hosted_failure_check.py",
+        "tests/infra/test_deployed_release_bicep_projection.py",
+        "tests/release/test_deployed_release_diagnostic_package.py",
+        "tests/hosted/test_observe_deployed_release_state.py",
+        "tests/hosted/test_run_deployed_release_diagnostic.py",
+        "tests/hosted/test_azure_ai_reconciliation.py",
+        "tests/hosted/test_azure_ai_enablement_actions.py",
+        "tests/hosted/test_azure_ai_revision.py",
+        "tests/hosted/test_run_ai_enablement.py",
+        "tests/hosted/test_create_ai_enablement_package.py",
+        "tests/hosted/test_publish_registry_image.py",
+        "tests/hosted/test_ai_enablement_contract.py",
+        "tests/infra/test_ai_enablement_bicep.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "synthetic": {
+      "argv": [
+        ".venv/bin/pytest",
+        "tests/unit/test_synthetic_generator.py",
+        "tests/unit/adapters/test_declared_sources.py",
+        "tests/unit/adapters/test_canonical_validation.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "postgres_seed": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/integration/test_synthetic_seed.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "imports_focused": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/unit/test_business_keys.py",
+        "tests/services/test_canonical_dataset_assembler.py",
+        "tests/property/test_canonical_dataset_assembler.py",
+        "tests/services/test_import_service.py",
+        "tests/services/test_dataset_service.py",
+        "tests/repositories/test_import_version_repositories.py",
+        "tests/integration/test_atomic_import_version.py",
+        "tests/api/v1/test_imports.py",
+        "tests/security/test_import_conflict_export.py",
+        "tests/security/test_synthetic_source_boundary.py",
+        "tests/security/test_upload_boundary.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "public_release_focused": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/unit/profit/test_bridge.py",
+        "tests/services/test_public_release_service.py",
+        "tests/services/test_dataset_preparation_service.py",
+        "tests/services/test_profit_bridge_service.py",
+        "tests/api/test_public_release.py",
+        "tests/api/v1/test_datasets.py",
+        "tests/api/v1/test_dataset_exports.py",
+        "tests/integration/test_analysis_vertical.py",
+        "tests/integration/test_session_version_pinning.py",
+        "tests/security/test_upload_boundary.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "actions_focused": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/unit/actions",
+        "tests/services/test_action_service.py",
+        "tests/api/v1/test_actions.py",
+        "tests/integration/test_action_card_end_to_end.py",
+        "tests/security/test_cross_session_isolation.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "viewer_session_focused": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/services/test_demo_session_service.py",
+        "tests/api/test_demo_sessions.py",
+        "tests/security/test_viewer_operator_boundaries.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "library_focused": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/services/test_library_service.py",
+        "tests/services/test_dataset_export_service.py",
+        "tests/api/v1/test_library.py",
+        "tests/api/v1/test_dataset_exports.py",
+        "tests/api/test_demo_library.py",
+        "tests/security/test_viewer_operator_boundaries.py",
+        "tests/security/test_cross_session_isolation.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "preferences_focused": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/postgres/test_migration_chain.py",
+        "tests/services/test_preferences_service.py",
+        "tests/api/v1/test_preferences.py",
+        "tests/api/test_demo_preferences.py",
+        "tests/security/test_preferences_boundary.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "migration": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/postgres/test_migration_chain.py",
+        "tests/postgres/test_0008_ai_budget_ledger.py",
+        "tests/postgres/test_0009_prompt_preset_audit.py",
+        "tests/postgres/test_0010_demo_data_activation.py",
+        "tests/postgres/test_0011_operator_source_kind.py",
+        "tests/postgres/test_0014_import_base_lineage.py",
+        "tests/api/test_application_shell.py",
+        "tests/integration/test_cloud_prepare.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "browser_local": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/acceptance/test_browser_smoke.py",
+        "tests/browser/test_corrected_viewer_operator_experience.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "exact_15": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/acceptance/test_exact_15_sessions.py",
+        "tests/acceptance/test_viewer_demo_activation_capacity.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "restart": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/acceptance/test_restart_readback.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "rollback": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/test_postgres.py",
+        "tests/acceptance/test_rollback_compatibility.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "verification_policy": {
+      "argv": [
+        ".venv/bin/pytest",
+        "tests/release/test_select_required_checks.py",
+        "-q"
+      ],
+      "reuse": "development_only"
+    },
+    "full_release_gate": {
+      "argv": [],
+      "reuse": "never"
+    }
+  },
+  "domains": [
+    {
+      "checks": [
+        "full_release_gate"
+      ],
+      "exclude": [],
+      "exclusive": true,
+      "include": [
+        "bizpulse/release/attestations/*.json",
+        "bizpulse/.tmp/launch-packages/**",
+        "bizpulse/.tmp/rollback-packages/**"
+      ],
+      "name": "release_proof"
+    },
+    {
+      "checks": [
+        "authority_contract"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "*.md",
+        "docs/**/*.md",
+        "bizpulse/docs/**/*.md",
+        "bizpulse/release/current_authority.json",
+        "bizpulse/release/authority-document-policy.json",
+        "bizpulse/scripts/release_authority.py",
+        "bizpulse/scripts/check_authority_contract.py",
+        "bizpulse/scripts/admin_ai_current_successor.py",
+        "bizpulse/scripts/refresh_admin_ai_current_authority.py",
+        "bizpulse/scripts/refresh_current_authority.py",
+        "bizpulse/tests/hosted/test_refresh_admin_ai_current_authority.py",
+        "bizpulse/tests/release/test_authority_contract.py"
+      ],
+      "name": "authority"
+    },
+    {
+      "checks": [
+        "verification_policy"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/.gitignore",
+        "bizpulse/release/verification-policy.json",
+        "bizpulse/scripts/select_required_checks.py",
+        "bizpulse/scripts/verify_changed.py",
+        "bizpulse/tests/release/test_select_required_checks.py"
+      ],
+      "name": "verification_tooling"
+    },
+    {
+      "checks": [
+        "ai_focused",
+        "frontend",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/src/ai/**",
+        "bizpulse/src/config.py",
+        "bizpulse/src/services/ai_chat_service.py",
+        "bizpulse/api/routers/ai_chat.py",
+        "bizpulse/api/v1/routers/ai_chat.py",
+        "bizpulse/api/v1/schemas/ai_chat.py",
+        "bizpulse/src/repositories/ai_chat.py",
+        "bizpulse/scripts/qualify_openai_model.py",
+        "bizpulse/tests/unit/ai/**",
+        "bizpulse/tests/services/test_ai_chat_service.py",
+        "bizpulse/tests/api/v1/test_ai_chat.py",
+        "bizpulse/tests/security/test_ai_chat_boundary.py",
+        "bizpulse/tests/unit/test_config.py",
+        "bizpulse/tests/fixtures/ai/**",
+        "bizpulse/tests/integration/test_ai_chat_tools.py",
+        "bizpulse/tests/integration/test_chat_action_handoff.py"
+      ],
+      "name": "ai"
+    },
+    {
+      "checks": [
+        "ai_focused",
+        "ai_infra_boundary",
+        "frontend",
+        "browser_local",
+        "release_static"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/scripts/ai_enablement_contract.py",
+        "bizpulse/scripts/admin_ai_current_successor.py",
+        "bizpulse/scripts/azure_ai_enablement_actions.py",
+        "bizpulse/scripts/azure_ai_reconciliation.py",
+        "bizpulse/scripts/azure_ai_revision.py",
+        "bizpulse/scripts/create_ai_enablement_package.py",
+        "bizpulse/scripts/create_release_manifest.py",
+        "bizpulse/scripts/publish_registry_image.py",
+        "bizpulse/scripts/run_ai_enablement.py",
+        "bizpulse/tests/hosted/test_ai_enablement_contract.py",
+        "bizpulse/tests/hosted/test_azure_ai_enablement_actions.py",
+        "bizpulse/tests/hosted/test_azure_ai_reconciliation.py",
+        "bizpulse/tests/hosted/test_azure_ai_revision.py",
+        "bizpulse/tests/hosted/test_create_ai_enablement_package.py",
+        "bizpulse/tests/hosted/test_publish_registry_image.py",
+        "bizpulse/tests/hosted/test_run_ai_enablement.py"
+      ],
+      "name": "ai_enablement_release"
+    },
+    {
+      "checks": [
+        "frontend",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/frontend/**",
+        "bizpulse/tests/frontend/**",
+        "bizpulse/scripts/browser_release_gate.mjs",
+        "bizpulse/package.json",
+        "bizpulse/package-lock.json"
+      ],
+      "name": "frontend"
+    },
+    {
+      "checks": [
+        "ai_infra_boundary",
+        "release_static"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/infra/**",
+        "bizpulse/tests/infra/**",
+        "bizpulse/tests/services/test_ai_chat_container.py"
+      ],
+      "name": "infra"
+    },
+    {
+      "checks": [
+        "library_focused",
+        "frontend",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/src/repositories/library.py",
+        "bizpulse/src/repositories/dataset_exports.py",
+        "bizpulse/src/exports/**",
+        "bizpulse/src/services/library_service.py",
+        "bizpulse/src/services/store_scope.py",
+        "bizpulse/src/services/dataset_export_service.py",
+        "bizpulse/api/routers/demo_library.py",
+        "bizpulse/api/v1/routers/library.py",
+        "bizpulse/api/v1/schemas/library.py",
+        "bizpulse/api/container.py",
+        "bizpulse/api/main.py",
+        "bizpulse/api/v1/router.py",
+        "bizpulse/tests/services/test_library_service.py",
+        "bizpulse/tests/services/test_store_scope.py",
+        "bizpulse/tests/services/test_dataset_export_service.py",
+        "bizpulse/tests/api/v1/test_library.py",
+        "bizpulse/tests/api/v1/test_dataset_exports.py",
+        "bizpulse/tests/api/test_demo_library.py",
+        "bizpulse/tests/frontend/library.test.mjs",
+        "bizpulse/tests/security/test_viewer_operator_boundaries.py"
+      ],
+      "name": "library"
+    },
+    {
+      "checks": [
+        "public_release_focused",
+        "postgres_seed",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/api/container.py",
+        "bizpulse/api/routers/public_release.py",
+        "bizpulse/api/v1/routers/datasets.py",
+        "bizpulse/api/v1/routers/analyses.py",
+        "bizpulse/api/v1/routers/forecasts.py",
+        "bizpulse/api/v1/routers/profit_bridge.py",
+        "bizpulse/api/v1/schemas/forecasts.py",
+        "bizpulse/api/v1/schemas/profit_bridge.py",
+        "bizpulse/api/v1/schemas/datasets.py",
+        "bizpulse/src/repositories/forecasts.py",
+        "bizpulse/src/services/dataset_preparation_service.py",
+        "bizpulse/src/services/analysis_service.py",
+        "bizpulse/src/services/forecast_service.py",
+        "bizpulse/src/services/store_scope.py",
+        "bizpulse/src/profit/bridge.py",
+        "bizpulse/src/services/demo_action_authority.py",
+        "bizpulse/src/services/profit_bridge_service.py",
+        "bizpulse/src/services/public_release_service.py",
+        "bizpulse/tests/unit/profit/test_bridge.py",
+        "bizpulse/tests/services/test_public_release_service.py",
+        "bizpulse/tests/services/test_dataset_preparation_service.py",
+        "bizpulse/tests/services/test_profit_bridge_service.py",
+        "bizpulse/tests/api/test_public_release.py",
+        "bizpulse/tests/api/v1/test_forecasts.py",
+        "bizpulse/tests/api/v1/test_profit_bridge.py",
+        "bizpulse/tests/api/v1/test_datasets.py",
+        "bizpulse/tests/integration/test_analysis_vertical.py",
+        "bizpulse/tests/integration/test_session_version_pinning.py",
+        "bizpulse/tests/services/test_forecast_service.py",
+        "bizpulse/tests/services/test_store_scope.py",
+        "bizpulse/tests/security/test_upload_boundary.py"
+      ],
+      "name": "public_release"
+    },
+    {
+      "checks": [
+        "imports_focused",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/api/v1/routers/imports.py",
+        "bizpulse/api/v1/schemas/imports.py",
+        "bizpulse/src/services/business_keys.py",
+        "bizpulse/src/services/canonical_contracts.py",
+        "bizpulse/src/services/canonical_dataset_assembler.py",
+        "bizpulse/src/services/import_service.py",
+        "bizpulse/src/adapters/upseller_excel.py",
+        "bizpulse/src/repositories/imports.py",
+        "bizpulse/src/repositories/datasets.py",
+        "bizpulse/src/repositories/storage_objects.py",
+        "bizpulse/tests/services/test_import_service.py",
+        "bizpulse/tests/services/test_canonical_dataset_assembler.py",
+        "bizpulse/tests/services/test_dataset_service.py",
+        "bizpulse/tests/repositories/test_import_version_repositories.py",
+        "bizpulse/tests/property/__init__.py",
+        "bizpulse/tests/property/test_canonical_dataset_assembler.py",
+        "bizpulse/tests/unit/test_business_keys.py",
+        "bizpulse/tests/integration/test_atomic_import_version.py",
+        "bizpulse/tests/api/v1/test_imports.py",
+        "bizpulse/tests/security/test_import_conflict_export.py",
+        "bizpulse/tests/security/test_synthetic_source_boundary.py"
+      ],
+      "name": "imports"
+    },
+    {
+      "checks": [
+        "actions_focused",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/src/actions/**",
+        "bizpulse/src/services/action_service.py",
+        "bizpulse/src/services/demo_action_authority.py",
+        "bizpulse/src/repositories/actions.py",
+        "bizpulse/api/v1/schemas/actions.py",
+        "bizpulse/api/v1/routers/actions.py",
+        "bizpulse/tests/unit/actions/**",
+        "bizpulse/tests/services/test_action_service.py",
+        "bizpulse/tests/api/v1/test_actions.py",
+        "bizpulse/tests/integration/test_action_card_end_to_end.py",
+        "bizpulse/tests/security/test_action_export.py",
+        "bizpulse/tests/security/test_cross_session_isolation.py"
+      ],
+      "name": "actions"
+    },
+    {
+      "checks": [
+        "synthetic",
+        "postgres_seed",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/src/synthetic/**",
+        "bizpulse/src/adapters/**",
+        "bizpulse/scripts/generate_synthetic_demo.py",
+        "bizpulse/scripts/seed_demo.py",
+        "bizpulse/tests/unit/test_synthetic_generator.py",
+        "bizpulse/tests/unit/adapters/**",
+        "bizpulse/tests/integration/test_synthetic_seed.py",
+        "bizpulse/tests/fixtures/synthetic/**"
+      ],
+      "name": "synthetic"
+    },
+    {
+      "checks": [
+        "viewer_session_focused",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/api/dependencies/session.py",
+        "bizpulse/api/errors.py",
+        "bizpulse/api/main.py",
+        "bizpulse/api/routers/demo_sessions.py",
+        "bizpulse/src/repositories/sessions.py",
+        "bizpulse/src/services/demo_session_service.py",
+        "bizpulse/tests/auth_support.py",
+        "bizpulse/tests/services/test_demo_session_service.py",
+        "bizpulse/tests/api/test_demo_sessions.py",
+        "bizpulse/tests/security/test_viewer_operator_boundaries.py"
+      ],
+      "name": "viewer_session"
+    },
+    {
+      "checks": [
+        "preferences_focused",
+        "frontend",
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/src/repositories/preferences.py",
+        "bizpulse/src/services/preferences_service.py",
+        "bizpulse/api/routers/demo_preferences.py",
+        "bizpulse/api/v1/routers/preferences.py",
+        "bizpulse/api/v1/schemas/preferences.py",
+        "bizpulse/alembic/versions/0013_workspace_preferences.py",
+        "bizpulse/tests/services/test_preferences_service.py",
+        "bizpulse/tests/api/v1/test_preferences.py",
+        "bizpulse/tests/api/test_demo_preferences.py",
+        "bizpulse/tests/security/test_preferences_boundary.py",
+        "bizpulse/tests/frontend/settings.test.mjs"
+      ],
+      "name": "preferences"
+    },
+    {
+      "checks": [
+        "migration",
+        "restart",
+        "rollback"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/alembic/versions/**",
+        "bizpulse/src/db/schema.py",
+        "bizpulse/src/db/readiness.py",
+        "bizpulse/tests/postgres/**",
+        "bizpulse/tests/api/test_application_shell.py",
+        "bizpulse/tests/integration/test_cloud_prepare.py",
+        "bizpulse/tests/integration/test_chat_session_recovery.py",
+        "bizpulse/tests/acceptance/test_restart_readback.py",
+        "bizpulse/tests/acceptance/test_rollback_compatibility.py"
+      ],
+      "name": "migration"
+    },
+    {
+      "checks": [
+        "exact_15"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/tests/acceptance/test_exact_15_sessions.py",
+        "bizpulse/tests/acceptance/test_viewer_demo_activation_capacity.py"
+      ],
+      "name": "acceptance_capacity"
+    },
+    {
+      "checks": [
+        "browser_local"
+      ],
+      "exclude": [],
+      "exclusive": false,
+      "include": [
+        "bizpulse/tests/acceptance/test_browser_smoke.py",
+        "bizpulse/tests/acceptance/support.py",
+        "bizpulse/tests/browser/test_corrected_viewer_operator_experience.py"
+      ],
+      "name": "acceptance_browser"
+    },
+    {
+      "checks": [
+        "release_static"
+      ],
+      "exclude": [
+        "bizpulse/release/attestations/**",
+        "bizpulse/release/current_authority.json",
+        "bizpulse/release/authority-document-policy.json",
+        "bizpulse/release/verification-policy.json",
+        "bizpulse/scripts/release_authority.py",
+        "bizpulse/scripts/check_authority_contract.py",
+        "bizpulse/scripts/admin_ai_current_successor.py",
+        "bizpulse/scripts/refresh_admin_ai_current_authority.py",
+        "bizpulse/scripts/refresh_current_authority.py",
+        "bizpulse/scripts/select_required_checks.py",
+        "bizpulse/scripts/verify_changed.py",
+        "bizpulse/tests/release/test_authority_contract.py",
+        "bizpulse/tests/hosted/test_refresh_admin_ai_current_authority.py",
+        "bizpulse/tests/release/test_select_required_checks.py"
+      ],
+      "exclusive": false,
+      "include": [
+        "bizpulse/release/**",
+        "bizpulse/scripts/verify_release.py",
+        "bizpulse/scripts/create_release_manifest.py",
+        "bizpulse/scripts/create_two_stage_release_package.py",
+        "bizpulse/scripts/create_partial_release_recovery_package.py",
+        "bizpulse/scripts/create_seeded_release_recovery_package.py",
+        "bizpulse/scripts/create_deployed_release_recovery_package.py",
+        "bizpulse/scripts/run_deployed_release_recovery.py",
+        "bizpulse/scripts/run_seeded_release_recovery.py",
+        "bizpulse/scripts/update_azure_job_binding.py",
+        "bizpulse/scripts/verify_partial_release_state.py",
+        "bizpulse/scripts/verify_seeded_release_state.py",
+        "bizpulse/scripts/verify_deployed_release_state.py",
+        "bizpulse/scripts/run_hosted_failure_check.py",
+        "bizpulse/scripts/verify_phase1_fence.py",
+        "bizpulse/scripts/verify_stage_receipts.py",
+        "bizpulse/scripts/secret_boundary.py",
+        "bizpulse/scripts/deployed_release_diagnostic_contract.py",
+        "bizpulse/scripts/build_deployed_release_desired_projection.py",
+        "bizpulse/scripts/create_deployed_release_diagnostic_package.py",
+        "bizpulse/scripts/observe_deployed_release_state.py",
+        "bizpulse/scripts/run_deployed_release_diagnostic.py",
+        "bizpulse/tests/release/**",
+        "bizpulse/tests/release/test_deployed_release_recovery_package.py",
+        "bizpulse/tests/hosted/test_verify_azure_demo.py",
+        "bizpulse/tests/hosted/test_verify_partial_release_state.py",
+        "bizpulse/tests/hosted/test_verify_seeded_release_state.py",
+        "bizpulse/tests/hosted/test_verify_deployed_release_state.py",
+        "bizpulse/tests/hosted/test_run_deployed_release_recovery.py",
+        "bizpulse/tests/hosted/test_run_seeded_release_recovery.py",
+        "bizpulse/tests/hosted/test_update_azure_job_binding.py",
+        "bizpulse/tests/hosted/test_phase1_receipt_resume.py",
+        "bizpulse/tests/hosted/test_rollback_forward_resume.py",
+        "bizpulse/tests/hosted/test_rollback_forward_resume_runner.py",
+        "bizpulse/tests/hosted/test_azure_preflight.py",
+        "bizpulse/tests/hosted/test_run_hosted_failure_check.py",
+        "bizpulse/tests/infra/test_deployed_release_bicep_projection.py",
+        "bizpulse/tests/release/test_deployed_release_diagnostic_package.py",
+        "bizpulse/tests/hosted/test_observe_deployed_release_state.py",
+        "bizpulse/tests/hosted/test_run_deployed_release_diagnostic.py",
+        "bizpulse/tests/hosted/verify_azure_demo.py",
+        "bizpulse/tests/acceptance/test_rollback_compatibility.py"
+      ],
+      "name": "release_tooling"
+    }
+  ],
+  "schema_version": "bizpulse.verification-policy.v1"
+}

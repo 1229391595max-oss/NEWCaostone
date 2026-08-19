@@ -1,0 +1,79 @@
+{
+  "boundaries": {
+    "ai_enabled": false,
+    "application_deployed": false,
+    "candidate_seed_writes": false,
+    "openai_key_accessed": false,
+    "paid_ai_called": false,
+    "traffic_switched": false
+  },
+  "observed_at": "2026-08-16T20:36:02Z",
+  "prepare": {
+    "arguments": [
+      "scripts/prepare_cloud.py"
+    ],
+    "ended_at": "2026-08-16T20:26:09Z",
+    "execution": "newcaostone-demo-prepare-pc747ae",
+    "started_at": "2026-08-16T20:25:35Z",
+    "status": "Succeeded"
+  },
+  "release": {
+    "attestation_git_sha": "c573f2be9d8d6414143fbeab2fa2af788caf4f19",
+    "attestation_path": "release/attestations/82fd4a4dcfbc04a6cbe6386ce8891b750a1ea7e3.json",
+    "candidate_git_sha": "82fd4a4dcfbc04a6cbe6386ce8891b750a1ea7e3",
+    "candidate_image_digest": "sha256:713a6984d4a034a0be73b46c10a897aeb236c201325ff8a88ba524fc6c10295c",
+    "candidate_image_input_sha256": "8fec360c0073bb85ec5837af2ee118f5cdc4eb90a388a77006096fb334064c90",
+    "migration_head": "0014_import_base_lineage",
+    "rollback_git_sha": "537effe3036f77f83225beef12589bd447205a8b",
+    "rollback_image_digest": "sha256:2a95c20046cde04a383a280b350a450c15cc7c46df92e1e8eaf5014eeb5c8512",
+    "rollback_image_input_sha256": "07d3179aa275fec2d8f4347566b7f42f782f0024d1205442e78ca30ed657a233",
+    "synthetic_dataset_version_id": "b91e1179-c76a-53a5-b036-ce7b88b74cbe",
+    "synthetic_manifest_sha256": "5e0d761fddae1d7add1739ed5cff06eb1e1aad7c494152abd3334841bec61fde"
+  },
+  "recovery_attempts": [
+    {
+      "authorization_id": "b35604d2-eef1-4d83-9bc8-184041b26506",
+      "azure_request_dispatched": false,
+      "azure_state_changed": false,
+      "cli_exit_code": 2,
+      "completed_stages": [
+        "incident_preflight",
+        "registry_verify"
+      ],
+      "failed_stage": "bind_seed",
+      "failure_code": "azure_cli_arguments_invalid",
+      "package_sha256": "7e378f176589c590fafec782e7b29e564e85d4490b94ae0e7f163503ab1e1dbb",
+      "recorded_at": "2026-08-16T21:11:49Z"
+    }
+  ],
+  "schema_version": "newcaostone.partial-release-incident.v2",
+  "seed": {
+    "error": "seed_authority_mismatch",
+    "execution": "newcaostone-demo-seed-8a8k7de",
+    "previous_dataset_version_id": "8df2ff5e-ed7e-5ae2-b3e8-4bb5ae9e2550",
+    "previous_manifest_sha256": "8bb389bb241e904fcb2bb092b082da31d99aa314acab47068a293d184e5c329e",
+    "started_at": "2026-08-16T20:26:17Z",
+    "status": "Failed"
+  },
+  "source_package": {
+    "authorization_id": "20b9eadd-a525-459b-b7a3-fd7e47df5267",
+    "sha256": "084ee41e9c79bb96b8e60cd3ac417cac30e9e8f18af5de88ab0304a2374493b6"
+  },
+  "target": {
+    "application": "newcaostone-demo-app",
+    "application_revision": "newcaostone-demo-app--recover-78eaaf31-2a95c20",
+    "image_repository": "bizpulse",
+    "name_prefix": "newcaostone-demo",
+    "postgres_administrator_login": "bpoperator",
+    "postgres_server": "newcaostone-demo-pg",
+    "prepare_job": "newcaostone-demo-prepare",
+    "public_url": "https://newcaostone-demo-app.delightfulstone-15318d59.centralus.azurecontainerapps.io",
+    "region": "centralus",
+    "registry_name": "sellernorthbpacr",
+    "resource_group": "rg-bizpulse-centralus",
+    "seed_job": "newcaostone-demo-seed",
+    "storage_account": "newcaostonedemost",
+    "subscription_id": "fc89e7d3-5428-425e-863f-415859810c2c",
+    "tenant_id": "13d04c38-d91c-4f9f-8b65-6af2b515dd63"
+  }
+}

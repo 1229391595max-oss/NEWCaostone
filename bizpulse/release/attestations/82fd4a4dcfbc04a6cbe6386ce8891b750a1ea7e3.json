@@ -1,0 +1,135 @@
+{
+  "attestation_policy": {
+    "allowed_paths": [
+      "bizpulse/release/attestations/82fd4a4dcfbc04a6cbe6386ce8891b750a1ea7e3.json"
+    ],
+    "commit_parent_must_equal_candidate": true
+  },
+  "candidate_committed_at": "2026-08-16T14:01:44-05:00",
+  "candidate_git_sha": "82fd4a4dcfbc04a6cbe6386ce8891b750a1ea7e3",
+  "candidate_git_tree": "bec62327df307cbe4f9be67b4c1687c603b3840b",
+  "candidate_image": {
+    "digest": "sha256:713a6984d4a034a0be73b46c10a897aeb236c201325ff8a88ba524fc6c10295c",
+    "image_input_sha256": "8fec360c0073bb85ec5837af2ee118f5cdc4eb90a388a77006096fb334064c90",
+    "platform": "linux/amd64",
+    "source_revision": "82fd4a4dcfbc04a6cbe6386ce8891b750a1ea7e3"
+  },
+  "claims": {
+    "accepted": false,
+    "ci_verified": false,
+    "deployed": false,
+    "hosted_verified": false,
+    "local_verified": true,
+    "production_ready": false
+  },
+  "configuration_names": [
+    "BIZPULSE_AI_CHAT_ENABLED",
+    "BIZPULSE_AI_DAILY_ATTEMPT_LIMIT",
+    "BIZPULSE_AI_GLOBAL_ATTEMPT_LIMIT_PER_MINUTE",
+    "BIZPULSE_AI_MAX_CONCURRENT_TURNS",
+    "BIZPULSE_AI_MONTHLY_TOKEN_LIMIT",
+    "BIZPULSE_AI_SESSION_ATTEMPT_LIMIT_PER_MINUTE",
+    "BIZPULSE_ALLOWED_ORIGIN",
+    "BIZPULSE_BLOB_CONNECTION_STRING",
+    "BIZPULSE_BLOB_CONTAINER",
+    "BIZPULSE_BLOB_ENDPOINT",
+    "BIZPULSE_DATABASE_URL",
+    "BIZPULSE_DEMO_SESSION_RATE_LIMIT_PER_HOUR",
+    "BIZPULSE_OPENAI_MODEL",
+    "BIZPULSE_OPENAI_REASONING_EFFORT",
+    "BIZPULSE_OPERATOR_PASSWORD_HASH",
+    "BIZPULSE_REQUEST_BODY_LIMIT_BYTES",
+    "BIZPULSE_RUNTIME_ENVIRONMENT",
+    "BIZPULSE_SESSION_PEPPER"
+  ],
+  "current_authority_evidence_sha256": "07d3179aa275fec2d8f4347566b7f42f782f0024d1205442e78ca30ed657a233",
+  "dependencies": {
+    "package-lock.json": "4f3ad0fa570ce7d2d33fb5f4391ca5a2cee971f8cbfb73d373034ed5c14c3798",
+    "package.json": "3af903eccdb233ea7dbadea41c9dda62732fe149ae51cc01f4f19915e74ce469",
+    "requirements-dev.txt": "059737b2ec19a11a3fb3d39370bcc643dfebacaf3a6632509fffdf407c8e201a",
+    "requirements.txt": "8329ccee47befb63b26ea8c24e127e11e40086f9f8e016cfe115a5fb78fd84ca"
+  },
+  "generated_at": "2026-08-16T19:48:04Z",
+  "image_input_sha256": "8fec360c0073bb85ec5837af2ee118f5cdc4eb90a388a77006096fb334064c90",
+  "migration_head": "0014_import_base_lineage",
+  "model_snapshot": {
+    "max_output_tokens": 2800,
+    "model": "gpt-5.4-nano-2026-03-17",
+    "reasoning_effort": "low"
+  },
+  "release_package_contract": {
+    "ai_revision_requires": [
+      "data_scope_revision_receipt",
+      "model_qualification_receipt"
+    ],
+    "data_scope_revision_ai_enabled": false,
+    "model_qualification_case_count": 12,
+    "stage_order": [
+      "data_scope_revision",
+      "ai_revision"
+    ]
+  },
+  "rollback_compatible_prior_sha": "537effe3036f77f83225beef12589bd447205a8b",
+  "rollback_image_digest": "sha256:2a95c20046cde04a383a280b350a450c15cc7c46df92e1e8eaf5014eeb5c8512",
+  "rollback_image_input_sha256": "07d3179aa275fec2d8f4347566b7f42f782f0024d1205442e78ca30ed657a233",
+  "schema_version": "newcaostone.integrated-release.v4",
+  "synthetic_fixture": {
+    "generator_source_sha256": "c522977dfefc539c6e4c03bad782dcab591dc530983fb508e56a45fff296f8be",
+    "manifest_path": "tests/fixtures/synthetic/v1/manifest.json",
+    "manifest_sha256": "5e0d761fddae1d7add1739ed5cff06eb1e1aad7c494152abd3334841bec61fde",
+    "source_classification": "pure_synthetic"
+  },
+  "verification_evidence": {
+    "checks": [
+      {
+        "command": "static candidate, source, migration, model, secret, and size checks",
+        "name": "static_release_boundaries",
+        "passed": true,
+        "summary": "all static boundaries passed"
+      },
+      {
+        "command": "python scripts/test_postgres.py tests -q",
+        "name": "python",
+        "passed": true,
+        "summary": "786 passed"
+      },
+      {
+        "command": "node --test tests/frontend/action-inbox.test.mjs tests/frontend/analytics.test.mjs tests/frontend/api-client.test.mjs tests/frontend/ask-bizpulse-effects.test.mjs tests/frontend/ask-bizpulse-state.test.mjs tests/frontend/ask-bizpulse-view-model.test.mjs tests/frontend/ask-bizpulse-view.test.mjs tests/frontend/browser-process-env.test.mjs tests/frontend/charts.test.mjs tests/frontend/copy-contract.test.mjs tests/frontend/evidence-drawer.test.mjs tests/frontend/file-drop-zone.test.mjs tests/frontend/forecast.test.mjs tests/frontend/formatters.test.mjs tests/frontend/i18n.test.mjs tests/frontend/library.test.mjs tests/frontend/login.test.mjs tests/frontend/operator-data-source.test.mjs tests/frontend/product-theater.test.mjs tests/frontend/profit-bridge.test.mjs tests/frontend/runtime-session.test.mjs tests/frontend/settings.test.mjs tests/frontend/shell.test.mjs tests/frontend/store-scope.test.mjs tests/frontend/workspace.test.mjs",
+        "name": "frontend",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "python scripts/test_postgres.py tests/acceptance/test_exact_15_sessions.py tests/acceptance/test_restart_readback.py tests/acceptance/test_rollback_compatibility.py -q",
+        "name": "exact_15_restart_rollback",
+        "passed": true,
+        "summary": "3 passed"
+      },
+      {
+        "command": "python -m ruff check .",
+        "name": "ruff",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "python -m compileall -q api src scripts",
+        "name": "compileall",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "git diff --check HEAD",
+        "name": "diff_check",
+        "passed": true,
+        "summary": "exit=0"
+      },
+      {
+        "command": "python scripts/test_postgres.py tests/acceptance/test_browser_smoke.py -q",
+        "name": "browser",
+        "passed": true,
+        "summary": "7 passed"
+      }
+    ],
+    "sha256": "d5b32f9b42871e50622ef8597419912d8a3d42e837bad59edeb72dac915d22a0"
+  }
+}
